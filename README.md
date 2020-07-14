@@ -17,6 +17,7 @@ On Error GoTo errorhandle
     Set fix_range = Application.InputBox("please select range.", "Range Selection", , , , , , 8)
 
 'loop though the range to fix each cell
+
     For Each cell In fix_range
         
         myyear = Left(cell.Value, WorksheetFunction.Search(".", cell.Value) - 1) + 1911 ' make it west year
